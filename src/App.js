@@ -56,8 +56,8 @@ export default connect(
     (state) => ({
         number: state.counter,
         post: state.post.data,
-        loading: state.post.pending,
-        error: state.post.error
+        loading: state.pender.pending['GET_POST'],
+        error: state.pender.failure['GET_POST']
     }),
     (dispatch) => ({
         CounterActions: bindActionCreators(counterActions, dispatch),
